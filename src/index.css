@@ -5,7 +5,27 @@
     color: black;
     font-weight: 400;
     line-height: 14px;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-weight: 500;
+    line-height: 57.6px;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.2px;
+}
+
+.ltl-grey {
+    color: #768298;
+    line-height: 22.4px;
+    font-size: 14px;
 }
 
 .swapper {
@@ -64,10 +84,7 @@
     line-height: 28.8px;
 }
 
-.phone .phone-text {
-    color: #768298;
-    line-height: 22.4px
-}
+.phone .phone-text {}
 
 .btn {
     background: #34AADD;
@@ -101,4 +118,101 @@
 
 .navbar-footer ul li a.active {
     color: #F95A59;
+}
+
+.popular {
+    padding: 90px 0;
+}
+
+.popular_products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 270px;
+    height: 372px;
+    border: 1px solid #EBEBF1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.product-photo {
+    height: 174px;
+    /*background: url('https://cdn.wallpapersafari.com/10/50/JMKjz9.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.rowIcons {
+    display: flex;
+    padding: 10px;
+}
+
+.rowIcons-icon {
+    padding: 3px 10px;
+    color: white;
+    font-size: 14px;
+    line-height: 22.4px;
+    border-radius: 3px;
+}
+
+.action {
+    margin-right: 3px;
+    background: #FAC300;
+}
+
+.hit {
+    margin-right: 3px;
+    background: #DC2C53;
+}
+
+.bestPrice {
+    background: #a7507b;
+}
+
+.product-middle {
+    padding: 10px;
+    height: 198px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-text {
+	max-height: 121px;
+	overflow: hidden;
+}
+
+.product-text p {
+	margin-top: 5px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price-old span, .price-old i {
+	line-height: 19.6px;
+	font-size: 14px;
+	color: #768298;
+}
+
+.price-new span, .price-new i {
+	line-height: 22.4px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.diagonale {
+	position: relative;
+	top: 10px;
+	transform: rotate(23deg);
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #F95A59;
 }
