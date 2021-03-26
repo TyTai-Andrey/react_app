@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Popular from '../components/Popular';
+import New from '../components/New';
 
 
 function Home() {
     return (
-        <Popular/>
+        <Fragment>
+            <Popular/>
+            <New/>
+        </Fragment>
     )
 }
 
