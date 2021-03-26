@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
@@ -28,7 +28,7 @@ export default function Navbar() {
 		        	<div className="phone-number">8 (800)-555-35-35</div>
 		        	<div className="phone-text ltl-grey">Звоните с 8 до 23!</div>
 		        	</div>
-		        	<div className="btn"><span>Войти</span></div>
+		        	<div className="btn btn-blue short"><div className="btn-content"><span>Войти</span></div></div>
 				</div>
 		        <nav className='navbar-footer'>
 		        	<ul>

@@ -86,16 +86,81 @@ h3 {
 
 .phone .phone-text {}
 
+
+
 .btn {
-    background: #34AADD;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border-radius: .5rem;
 }
 
-.btn span {
-    display: block;
+.btn .btn-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.btn .btn-content span {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.btn .btn-content i {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.btn.short .btn-content {
     padding: 13px 30px;
+}
+
+.btn.icon .btn-content {
+    padding: 12px;
+}
+
+.btn.icon .btn-content i {
+    margin: 0px;
+    font-size: 23.1px;
+    line-height: 26px;
+}
+
+.btn-blue {
+    background: #34AADD;
+}
+
+.btn-blue .btn-content span {
     color: white;
 }
+
+.btn-blue .btn-content i {
+    color: white;
+}
+
+
+
+
+.btn-white {
+    background: white;
+    border: 1px solid #34AADD;
+}
+
+.btn-white .btn-content span {
+    color: #34AADD;
+}
+
+.btn-white .btn-content i {
+    color: #34AADD;
+}
+
+
 
 .navbar-footer {
     width: 100%;
