@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react';
 import Popular from '../components/Popular';
-import New from '../components/New';
+import News from '../components/News';
 
 
 function Home() {
     return (
         <Fragment>
             <Popular/>
-            <New/>
+            <News/>
         </Fragment>
     )
 }

@@ -17,6 +17,7 @@ import Context from './context';
 import Navbar from './components/Navbar';
 
 import './index.css';
+import './media.css';
 
 
 const popularProducts = [

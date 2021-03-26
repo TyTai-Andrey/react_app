@@ -295,10 +295,9 @@ h3 {
     background: #f0f0f0;
 }
 
-.new-blocks {
+.new_blocks {
+    max-width: 1170px;
     width: 100%;
-    height: 768px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -307,82 +306,37 @@ h3 {
 .new-block {
     height: 369px;
     border-radius: 6px;
+}
 
-    background: #dad;
+.new-block:nth-child(odd) {
+    margin-right: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .new-block.short {
     width: 369px;
+    flex-grow: 0
 }
 
 .new-block.long {
-    width: 770px;
+    max-width: 770px;
+    min-width: 369px;
+    /*width: 770px;*/
+    flex-grow: 1;
+    margin-bottom: 30px;
 }
 
-@media (max-width: 1440px) {
-
-    h1 {
-        text-align: center;
-    }
-
-    .new-blocks {
-        width: 768px;
-        height: 1167px;
-
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    #b6 {
-        order: 0
-    }
-    #b7 {
-        order: -1
-    }
-    #b8 {
-        order: 1
-    }
-    #b9 {
-        order: 0
-    }
-
-    .popular_products {
-        width: 870px;
-        height: 774px;
-        margin: 0 auto;
-    }
-
-
+ #b6 {
+    background: #34AADD;
 }
-/*1157*/
-        /*width: 870px;*/
-
-
-@media (max-width: 1156px) {
-
-    .popular_products {
-        width: 570px;
-    }
-
-   /* .phone .phone-number {
-        font-size: 13px;
-        line-height: 24.8px
-    }
-
-    .phone .phone-text {
-        font-size: 9px;
-        line-height: 14.4px
-    }*/
+#b7 {
+    background: rgba(167, 80, 123, .8);
 }
-
-@media (max-width: 856px) {
-
-    .popular_products {
-        width: 270px;
-        height: 1578px;
-    }
+#b8 {
+    background: rgba(102, 128, 174, .8);
+}
+#b9 {
+    background: #F95A59;
 }
 
 

@@ -1,0 +1,117 @@
+@media (max-width: 1440px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    .popular_products {
+        width: 870px;
+        height: 774px;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (max-width: 1156px) {
+
+    .popular_products {
+        width: 570px;
+    }
+
+   /* .phone .phone-number {
+        font-size: 13px;
+        line-height: 24.8px
+    }
+
+    .phone .phone-text {
+        font-size: 9px;
+        line-height: 14.4px
+    }*/
+}
+
+@media (max-width: 856px) {
+
+    .popular_products {
+        width: 270px;
+        height: 1578px;
+    }
+}
+
+/*1455px  БАГ ЭБАННЫЙ!*/
+
+@media (min-width: 1456px) {
+
+    .new-block.long {
+        max-width: 770px;
+        min-width: 369px;
+        width: 770px;
+        flex-grow: 1
+    }
+}
+
+@media (width: 1454px) {
+
+    .new-block:nth-child(odd) {
+        margin-right: 28px;
+        /*margin-bottom: 30px;*/
+    }
+    .new-block.long {
+        width: 770px;
+    }
+}
+
+@media (width: 1455px) {
+
+    .new-block:nth-child(odd) {
+        margin-right: 29px;
+        /*margin-bottom: 30px;*/
+    }
+    .new-block.long {
+        width: 770px;
+    }
+}
+
+@media (width: 1456px) {
+
+    .new-block:nth-child(odd) {
+        margin-right: 30px;
+        /*margin-bottom: 30px;*/
+    }
+    .new-block.long {
+        width: 770px;
+    }
+}
+
+
+@media (max-width: 1054px) {
+
+    /*.new-block:nth-child(odd) {
+        margin-right: 0px;
+    }*/
+
+    /*.new-block:last-child {
+        margin-right: 20px;
+    }
+
+    #b6 {
+        order: 1;
+    }*/
+
+    .new-block.long {
+        width: 369px;
+        flex-grow: 0;
+    }
+
+    .new_blocks {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .new_blocks .new-block {
+        margin: 0 0 30px 0;
+    }
+
+}
+
