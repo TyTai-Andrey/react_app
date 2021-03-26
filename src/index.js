@@ -21,16 +21,23 @@ import './media.css';
 
 
 const popularProducts = [
-	{id: "p1",productPhoto: "https://www.ejin.ru/wp-content/uploads/2017/09/14-890.jpg", iconAction: true, iconHit: true, iconBestPrice: true, title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя', oldPrice: '1 499 ', newPrice: '799 '},
-	{id: "p2",productPhoto: "https://doseng.org/uploads/posts/2018-06/1528416202_11.jpg", iconAction: true, iconHit: false, iconBestPrice: false, title:'Набор юного инстаблогера', description: 'Посмотрите на него. Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...', oldPrice: null, newPrice: '13 666 '},
-	{id: "p3",productPhoto: "https://get.wallhere.com/photo/2560x1600-px-landscape-river-rock-waterfall-1105857.jpg", iconAction: false, iconHit: true, iconBestPrice: false, title:'Лампа. Просто лампа.', description: 'В паре с загадочным цветком добавит загадочности вашему интерьеру', oldPrice: '2 699 ', newPrice: '1 789 '},
-	{id: "p4",productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", iconAction: true, iconHit: true, iconBestPrice: false, title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', oldPrice: '2 199 ', newPrice: '1 899 '},
+	{id: "p1", productPhoto: "https://www.ejin.ru/wp-content/uploads/2017/09/14-890.jpg", iconAction: true, iconHit: true, iconBestPrice: true, title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя', oldPrice: '1 499 ', newPrice: '799 '},
+	{id: "p2", productPhoto: "https://doseng.org/uploads/posts/2018-06/1528416202_11.jpg", iconAction: true, iconHit: false, iconBestPrice: false, title:'Набор юного инстаблогера', description: 'Посмотрите на него. Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...', oldPrice: null, newPrice: '13 666 '},
+	{id: "p3", productPhoto: "https://get.wallhere.com/photo/2560x1600-px-landscape-river-rock-waterfall-1105857.jpg", iconAction: false, iconHit: true, iconBestPrice: false, title:'Лампа. Просто лампа.', description: 'В паре с загадочным цветком добавит загадочности вашему интерьеру', oldPrice: '2 699 ', newPrice: '1 789 '},
+	{id: "p4", productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", iconAction: true, iconHit: true, iconBestPrice: false, title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', oldPrice: '2 199 ', newPrice: '1 899 '},
+]
+
+const arrNews = [
+	{id: "b6", block_type: "short", bg_img: null, bg_color: "#34AADD", title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
+	{id: "b7", block_type: "long", bg_img: "url('http://bigpicture.ru/wp-content/uploads/2014/12/5-aula_medica3.jpg')", bg_color: "rgba(167, 80, 123, .8)", title:'Длинный заголовок большой новости', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
+	{id: "b8", block_type: "long", bg_img: "url('http://bigpicture.ru/wp-content/uploads/2014/12/5-aula_medica3.jpg')", bg_color: "rgba(102, 128, 174, .8)", title:'Длинный заголовок большой новости', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
+	{id: "b9", block_type: "short", bg_img: null, bg_color: "#F95A59", title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
 ]
 
 function App() {
     return (
         <BrowserRouter>
-	        <Context.Provider value={{popularProducts}}>
+	        <Context.Provider value={{popularProducts, arrNews}}>
 		        <Navbar/>
 		       	<div className="body">
 		    		<Switch>

@@ -1,20 +1,21 @@
 import React, {useContext} from 'react';
 import Product from './Product';
 import Context from '../context';
+import Block from '../components/Block';
+
 
 
 function News () {
-    const {popularProducts} = useContext(Context)
-    const arrayPopularProducts = new Array(popularProducts.length).fill('')
+    const {arrNews} = useContext(Context)
+    console.log(arrNews)
     return (
         <section className="new">
             <div className="swapper">
                 <h1>Новости компании</h1>
                 <div className="new_blocks">
-                        <div id="b6" className="new-block short"></div>
-                        <div id="b7" className="new-block long"></div>
-                        <div id="b8" className="new-block long"></div>
-                        <div id="b9" className="new-block short"></div>                  
+                    {arrNews.map((item)=>{
+                        return <Block key={item.id} params={item}/>
+                    })}                 
                 </div>
                 <div className="btn btn-white">
                     <div className="btn-content">
