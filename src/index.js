@@ -15,6 +15,7 @@ import Contacts from './pages/Contacts';
 import Context from './context';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import './index.css';
 import './media.css';
@@ -42,7 +43,11 @@ const arrParthers = [
 	{id: "par10", URL: '/img/logo_5.jpg', alt: 'logo_5'}
 ]
 
+
+
+
 function App() {
+
     return (
         <BrowserRouter>
 	        <Context.Provider value={{popularProducts, arrNews, arrParthers}}>
@@ -58,6 +63,7 @@ function App() {
 						<Route path={'/contacts'} component={Contacts}/>
 					</Switch>
 		    	</div>
+	            <Footer/>
 	    	</Context.Provider>
     	</BrowserRouter>
     )

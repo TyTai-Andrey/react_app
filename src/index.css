@@ -128,6 +128,12 @@ h3 {
     padding: 13px 30px;
 }
 
+.btn.btn-call .btn-content i {
+    margin: 0 10px 0 0;
+    font-size: 18.1px;
+    line-height: 17px;
+}
+
 .btn.icon .btn-content {
     padding: 12px;
 }
@@ -448,3 +454,206 @@ h3 {
     box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
 }
 
+
+.footer {
+    height: 110px;
+    padding: 35px 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1170px;
+    height: 40px;
+}
+
+.footer .footer-nav_ul {
+    list-style: none;
+    width: 787px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer-nav_ul a {
+    text-decoration: none;
+}
+
+.line {
+    height: 40px;
+    width: 1px;
+    background: #BBC4D6;
+}
+
+.footer-logo a {
+    font-size: 34px;
+    line-height: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #BBC4D6;  
+}
+
+.footer-soc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 83px;
+    height: 30px;
+}
+
+.footer-soc i {
+    color: #BBC4D6;
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.footer-soc i:hover {
+    color: #768298;
+}
+
+.footer-logo a:hover {
+    color: #768298;
+}
+
+.footer-link ol {
+    list-style: none;
+    width: 408px;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-link ol li a {
+    font-size: 14px;
+    color: #34AADD;
+}
+
+.footer-link ol li a:hover {
+    text-decoration: underline;
+}
+
+.call-mobaile {
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #34AADD;
+}
+
+.call-mobaile .btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.call-mobaile .btn-content i {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    /*display: none;*/
+}
+
+.call-mobaile .btn-content span {
+    font-size: .9rem;
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.call-mobaile:hover > .btn-content i {
+    display: none;
+}
+
+.call-mobaile:hover > .btn-content span {
+    display: block;
+}
+
+.bg-modal {
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,.7);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.modal {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    min-width: 275px;
+    max-height: 50%;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: #34aadd;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal-header .close {
+    float: right;
+    padding-right: .8rem;
+    font-size: 28px;
+    color: white;
+}
+
+.modal-body {
+    padding: 20px 20px 80px 20px;
+}
+
+.modal-body h1 {
+    text-align: center;
+
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body form input, .modal-body form button {
+    width: 80%;
+    min-width: 230px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #34aadd; 
+    outline-color: #34aadd;
+}
+
+.modal-body form button {
+    background: #74c7ea;
+    color: white;
+}
+
+.modal-body form button:focus {
+    color: #2d2d3c;
+}
