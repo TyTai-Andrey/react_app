@@ -9,9 +9,10 @@ function Block({params}) {
     const bg_img = {background: params.bg_img+" center", backgroundSize: "cover"}
 
 
+
     return (
     	<div id={params.id} className={classes.join(' ')} style={params.bg_img && bg_img}>
-            <div className="bg-photo" style={{background: bg_color}}>
+            <div className="bg-color" style={{background: bg_color}}>
                 <div className="new_block-text">
                     <h2>{params.title}</h2>
                     <p>{params.description}</p>

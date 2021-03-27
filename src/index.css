@@ -94,6 +94,7 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: .5rem;
+    cursor: pointer;
 }
 
 .btn .btn-content {
@@ -119,6 +120,10 @@ h3 {
     margin-top: 30px;
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
+
 .btn.short .btn-content {
     padding: 13px 30px;
 }
@@ -137,6 +142,10 @@ h3 {
     background: #34AADD;
 }
 
+.btn-blue:hover {
+    background: #6680ae;
+}
+
 .btn-blue .btn-content span {
     color: white;
 }
@@ -153,13 +162,18 @@ h3 {
     border: 1px solid #34AADD;
 }
 
-.btn-white .btn-content span {
+.btn-white:hover {
+    border-color: #6680ae;
+}
+
+.btn-white:hover > .btn-content span, .btn-white:hover > .btn-content i {
+    color: #6680ae;
+}
+
+.btn-white .btn-content span, .btn-white .btn-content i {
     color: #34AADD;
 }
 
-.btn-white .btn-content i {
-    color: #34AADD;
-}
 
 
 
@@ -187,7 +201,7 @@ h3 {
 }
 
 .navbar-footer ul li a:hover {
-    color: #F95A59;
+    color: #34AADD;
 }
 
 .popular {
@@ -290,6 +304,10 @@ h3 {
 	background: #F95A59;
 }
 
+.iconBuy {
+    cursor: pointer;
+}
+
 .new {
     padding: 50px 0;
     background: #f0f0f0;
@@ -307,6 +325,7 @@ h3 {
     height: 369px;
     border-radius: 6px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .new_block:nth-child(odd) {
@@ -314,15 +333,23 @@ h3 {
     /*margin-bottom: 30px;*/
 }
 
-.bg-photo {
+.bg-color:hover {
+    background: rgba(255, 255, 255, .8) !important
+}
+
+.bg-color:hover > .new_block-text h2, .bg-color:hover > .new_block-text p {
+    color: #000 
+}
+
+.bg-color {
     display: flex;
     flex-direction: column;
 }
 
-.new_block.short .bg-photo {
+.new_block.short .bg-color {
     justify-content: flex-end;
 }
-.new_block.long .bg-photo {
+.new_block.long .bg-color {
     justify-content: center;
 }
 
@@ -380,22 +407,44 @@ h3 {
     margin-bottom: 30px;
 }
 
-.bg-photo {
+.bg-color {
    width: 100%;
    height: 100%;
 }
 
-#b6 {
-    background: #34AADD;
-}
-#b7 {
 
-}
-#b8 {
-    background: rgba(102, 128, 174, .8);
-}
-#b9 {
-    background: #F95A59;
+
+.partners {
+    padding: 90px 0 70px;
 }
 
+.partners-icon {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.partner-icon:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.partner-icon {
+    width: 270px;
+    height: 100px;
+    margin: 0 0 30px 30px;
+
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    /*background: url(img/logo_1.jpg) no-repeat;*/
+}
+
+.partner-icon:hover {
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
 

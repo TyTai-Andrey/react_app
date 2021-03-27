@@ -34,10 +34,18 @@ const arrNews = [
 	{id: "b9", block_type: "short", bg_img: null, bg_color: "#F95A59", title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
 ]
 
+const arrParthers = [
+	{id: "par6", URL: '/img/logo_1.jpg', alt: 'logo_1'}, 
+	{id: "par7", URL: '/img/logo_2.jpg', alt: 'logo_2'}, 
+	{id: "par8", URL: '/img/logo_3.jpg', alt: 'logo_3'}, 
+	{id: "par9", URL: '/img/logo_4.jpg', alt: 'logo_4'}, 
+	{id: "par10", URL: '/img/logo_5.jpg', alt: 'logo_5'}
+]
+
 function App() {
     return (
         <BrowserRouter>
-	        <Context.Provider value={{popularProducts, arrNews}}>
+	        <Context.Provider value={{popularProducts, arrNews, arrParthers}}>
 		        <Navbar/>
 		       	<div className="body">
 		    		<Switch>

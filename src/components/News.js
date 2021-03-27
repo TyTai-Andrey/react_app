@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import Product from './Product';
 import Context from '../context';
 import Block from '../components/Block';
 
@@ -7,7 +6,6 @@ import Block from '../components/Block';
 
 function News () {
     const {arrNews} = useContext(Context)
-    console.log(arrNews)
     return (
         <section className="new">
             <div className="swapper">
