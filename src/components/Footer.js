@@ -12,7 +12,7 @@ function Footer() {
     function openModal() {
 
         setModal(
-            !modal
+            {modal: !modal.modal}
         )
         document.body.style='overflow: hidden'        
     }
@@ -21,12 +21,11 @@ function Footer() {
         
         if (clickTarget.classList.contains("bg-modal") || clickTarget.classList.contains("close")) {
             setModal(
-                !modal
+                {modal: !modal.modal}
             )
         }
         document.body.style='overflow: auto'        
     }
-
 
     return (
         <footer className="footer">
@@ -60,7 +59,7 @@ function Footer() {
                         </div>
                     </div>
                     {
-                        modal 
+                        modal.modal 
                         &&
                     <div className="bg-modal" onClick={event=>closeModal(event.target)}>
                         <div className="modal">

@@ -657,3 +657,67 @@ h3 {
 .modal-body form button:focus {
     color: #2d2d3c;
 }
+
+.shop_cart {
+    display: block;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 90px;
+    right: 40px;
+
+    width: 80px;
+    height: 80px;
+}
+
+.shop_cart .btn-content {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #34AADD;
+    border-radius: 50%;
+    background: #34AADD;
+}
+
+.shop_cart .btn-content i {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    /*display: none;*/
+}
+
+.shop_cart a {
+    text-decoration: none;
+}
+
+.shop_cart .buyCounter {
+    position: relative;
+    display: block;
+    height: 27px;
+    width: 27px;
+    z-index: 999;
+    right: -5px;
+    top: -30px;
+    padding: 5px 3px 3px 3px;
+    background: white;
+    font-size: .9rem;
+    text-align: center;
+    color: #093d9a;
+    font-weight: 900;
+    border: 2px solid #093d9a;
+    border-radius: 50%;
+}
+
+.shop_cart:hover > .btn-content {
+    border-color: #6680ae;
+    background: #fff;
+}
+
+.shop_cart:hover > .btn-content i {
+    color: #6680ae;
+}

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import Context from '../context';
+
 
 
 function Product({params}) {
 	// console.log (params.params.productPhoto)
 	const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
-	
+	const {addProduct} = useContext(Context)
+
     return (
-        <div className="product">
+        <div className="product" id={params.id}>
         	<div className="product-photo"  style={photo}>
         		<div className="rowIcons">
 	        		{params.iconAction && <div className="rowIcons-icon action">Акция</div>}
@@ -31,7 +34,7 @@ function Product({params}) {
 	        				<i className="fas fa-ruble-sign"></i>
         				</div>
         			</div>
-        			<div className="iconBuy">
+        			<div className="iconBuy" onClick={event=>{addProduct(event.target.closest(".product").id)}}>
 	        			<div className="btn btn-blue icon">
 		                    <div className="btn-content">
 		                        <i className="fa fa-shopping-cart" aria-hidden="true"></i>

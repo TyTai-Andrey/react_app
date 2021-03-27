@@ -16,6 +16,7 @@ import Context from './context';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Shop_cart from './components/Shop_cart';
 
 import './index.css';
 import './media.css';
@@ -48,10 +49,26 @@ const arrParthers = [
 
 function App() {
 
+	const [ products, setProducts ] = React.useState([])
+
+
+    function addProduct(id) {
+    	popularProducts.map((i)=>{
+    		if (i.id===id) {
+    			setProducts(
+    				products.concat(i))
+    		}
+    	})
+    }
+    	console.log(products)
+
+    
+
     return (
         <BrowserRouter>
-	        <Context.Provider value={{popularProducts, arrNews, arrParthers}}>
+	        <Context.Provider value={{popularProducts, arrNews, arrParthers, addProduct}}>
 		        <Navbar/>
+		        <Shop_cart counter={products.length}/>
 		       	<div className="body">
 		    		<Switch>
 						<Route path={'/'} exact component={Home}/>
