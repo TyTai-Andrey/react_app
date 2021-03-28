@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import Context from '../context';
 import Block from '../components/Block';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -16,10 +17,13 @@ function News () {
                     })}                 
                 </div>
                 <div className="btn btn-white">
-                    <div className="btn-content">
-                        <span>Смотреть все новости</span>
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                    </div>
+                    <NavLink to="/about">
+                        <div className="btn-content">
+                            <span>
+                                Смотреть все новости</span>
+                            <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </section>

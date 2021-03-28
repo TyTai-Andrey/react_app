@@ -13,6 +13,10 @@
     min-height: calc(100vh - 250px) 
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-weight: 500;
     line-height: 57.6px;
@@ -176,7 +180,7 @@ h3 {
     border-color: #6680ae;
 }
 
-.btn-white:hover > .btn-content span, .btn-white:hover > .btn-content i {
+.btn-white:hover > a .btn-content span, .btn-white:hover > a .btn-content i {
     color: #6680ae;
 }
 
@@ -285,6 +289,10 @@ h3 {
 .product-text {
 	max-height: 121px;
 	overflow: hidden;
+}
+
+.product-text a:hover {
+    color: #34AADD;
 }
 
 .product-text p {
@@ -612,6 +620,7 @@ h3 {
     transform: translate(-50%, -50%);
     width: 50%;
     min-width: 275px;
+    max-width: 500px;
     max-height: 50%;
     background: #fff;
     border-radius: 6px;
@@ -785,4 +794,21 @@ h3 {
     width: 100%;
     justify-content: space-between;
     height: 100%;
+}
+
+.alert {
+    height: 300px;
+    width: 600px;
+    padding: 20px;
+    background: #ccc;
+    border: 1px solid #000;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.alert p {
+    margin: 15px;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Alert from '../components/Alert'
 
 function Saveguard() {
     return (
-        <h1>Saveguard</h1>
+        <Alert namePage={'Saveguard'}/>
     )
 }
 

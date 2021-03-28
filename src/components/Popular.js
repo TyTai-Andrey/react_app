@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import Product from './Product';
 import Context from '../context';
+import { NavLink } from 'react-router-dom';
 
 
 function Popular() {
@@ -16,10 +17,12 @@ function Popular() {
                 }
                 </div>
                 <div className="btn btn-white mt-30">
-                    <div className="btn-content">
-                        <span>Смотреть каталог</span>
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                    </div>
+                    <NavLink to="/products">
+                        <div className="btn-content">
+                            <span>Смотреть каталог</span>
+                            <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </section>

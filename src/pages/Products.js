@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Alert from '../components/Alert'
 
 function Products() {
     return (
-        <h1>Products</h1>
+        <Alert namePage={'Products'}/>
     )
 }
 

@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 import Home from './pages/Home';
-import Action from './pages/Action';
 import Products from './pages/Products';
 import Pay from './pages/Pay';
 import Saveguard from './pages/Saveguard';
@@ -51,7 +50,7 @@ function App() {
 		{id: "p4", productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", iconAction: true, iconHit: true, iconBestPrice: false, title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', oldPrice: '2 199 ', newPrice: '1 899 ', sum: 1},
 	])
 
-	const [ products, setProducts ] = useState(JSON.parse(localStorage.getItem('products')) || [])
+	const [ products, setProducts ] = useState(	JSON.parse(localStorage.getItem('products')) || [])
 
 	// console.log(JSON.parse(localStorage.getItem('products')))
 
@@ -145,7 +144,6 @@ function App() {
 		       	<div className="body">
 		    		<Switch>
 						<Route path={'/'} exact component={Home}/>
-						<Route path={'/action'} component={Action}/>
 						<Route path={'/products'} component={Products}/>
 						<Route path={'/pay'} component={Pay}/>
 						<Route path={'/saveguard'} component={Saveguard}/>

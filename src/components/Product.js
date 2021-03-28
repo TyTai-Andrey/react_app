@@ -1,5 +1,7 @@
 import React, {useContext} from 'react';
 import Context from '../context';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -19,7 +21,9 @@ function Product({params}) {
         	</div>
         	<div className="product-middle">
         		<div className="product-text">
-        			<h3>{params.title}</h3>
+        			<h3>
+                    <NavLink to="/products">{params.title}</NavLink>
+                    </h3>
         			<p className="ltl-grey">{params.description}</p>
         		</div>
         		<div className="product-footer">
