@@ -6,8 +6,16 @@
 
     .popular_products {
         width: 870px;
-        height: 774px;
         margin: 0 auto;
+    }
+
+    .popular_products .product {
+        margin: 30px 0 0 30px;
+
+       
+    } 
+    .popular_products .product:nth-child(3n+1) {
+        margin: 30px 0 0 0;
     }
 
 
@@ -19,9 +27,17 @@
         width: 570px;
     }
 
+    .swapper .popular_products .product {
+        margin: 30px 0 0 30px;
+
+       
+    } 
+    .swapper .popular_products .product:nth-child(2n+1) {
+        margin: 30px 0 0 0;
+    }
+
     .partners-icon {
         flex-direction: row;
-        /*justify-content: space-between;*/
         width: 570px;
         margin: 50px auto 0;
     }
@@ -40,8 +56,11 @@
 
     .popular_products {
         width: 270px;
-        height: 1578px;
     }
+
+    .swapper .popular_products .product {
+       margin: 30px 0 0 0;
+    }   
 
     .partners-icon {
         width: 270px;

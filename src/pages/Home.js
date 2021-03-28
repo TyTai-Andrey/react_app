@@ -7,6 +7,7 @@ import Partners from '../components/Partners';
 function Home() {
     return (
         <Fragment>
+        	
             <Popular/>
             <News/>
             <Partners/>

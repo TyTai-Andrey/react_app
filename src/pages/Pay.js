@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import CartList from '../components/CartList';
 
 
 function Pay() {
     return (
-        <h1>Pay</h1>
+        <Fragment>
+        	<CartList/>
+        </Fragment>
     )
 }
 

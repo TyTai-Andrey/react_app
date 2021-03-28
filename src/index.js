@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -22,12 +22,7 @@ import './index.css';
 import './media.css';
 
 
-const popularProducts = [
-	{id: "p1", productPhoto: "https://www.ejin.ru/wp-content/uploads/2017/09/14-890.jpg", iconAction: true, iconHit: true, iconBestPrice: true, title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя', oldPrice: '1 499 ', newPrice: '799 '},
-	{id: "p2", productPhoto: "https://doseng.org/uploads/posts/2018-06/1528416202_11.jpg", iconAction: true, iconHit: false, iconBestPrice: false, title:'Набор юного инстаблогера', description: 'Посмотрите на него. Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...', oldPrice: null, newPrice: '13 666 '},
-	{id: "p3", productPhoto: "https://get.wallhere.com/photo/2560x1600-px-landscape-river-rock-waterfall-1105857.jpg", iconAction: false, iconHit: true, iconBestPrice: false, title:'Лампа. Просто лампа.', description: 'В паре с загадочным цветком добавит загадочности вашему интерьеру', oldPrice: '2 699 ', newPrice: '1 789 '},
-	{id: "p4", productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", iconAction: true, iconHit: true, iconBestPrice: false, title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', oldPrice: '2 199 ', newPrice: '1 899 '},
-]
+
 
 const arrNews = [
 	{id: "b6", block_type: "short", bg_img: null, bg_color: "#34AADD", title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя'},
@@ -49,26 +44,104 @@ const arrParthers = [
 
 function App() {
 
-	const [ products, setProducts ] = React.useState([])
+	const [popularProducts, setPopularProducts] = useState([
+		{id: "p1", productPhoto: "https://www.ejin.ru/wp-content/uploads/2017/09/14-890.jpg", iconAction: true, iconHit: true, iconBestPrice: true, title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя', oldPrice: '1 499 ', newPrice: '799 ', sum: 1},
+		{id: "p2", productPhoto: "https://doseng.org/uploads/posts/2018-06/1528416202_11.jpg", iconAction: true, iconHit: false, iconBestPrice: false, title:'Набор юного инстаблогера', description: 'Посмотрите на него. Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...', oldPrice: null, newPrice: '13 666 ', sum: 1},
+		{id: "p3", productPhoto: "https://get.wallhere.com/photo/2560x1600-px-landscape-river-rock-waterfall-1105857.jpg", iconAction: false, iconHit: true, iconBestPrice: false, title:'Лампа. Просто лампа.', description: 'В паре с загадочным цветком добавит загадочности вашему интерьеру', oldPrice: '2 699 ', newPrice: '1 789 ', sum: 1},
+		{id: "p4", productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", iconAction: true, iconHit: true, iconBestPrice: false, title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', oldPrice: '2 199 ', newPrice: '1 899 ', sum: 1},
+	])
 
+	const [ products, setProducts ] = useState(JSON.parse(localStorage.getItem('products')) || [])
+
+	// console.log(JSON.parse(localStorage.getItem('products')))
+
+	useEffect(()=>{
+		localStorage.setItem('products', JSON.stringify(products, null, 3));
+	},[products])
+
+	function addProductSum(id) {
+    	let newPopularProducts = []
+
+		products.map(j=>{
+			if (j.id === id) {
+				j.sum += 1;
+				newPopularProducts.push(j);
+			} else {
+				newPopularProducts.push(j);
+			}
+		})
+				setProducts (newPopularProducts);
+	}
+
+	function clearSumProduct(id) {
+    	let newPopularProducts = []
+
+		products.map(j=>{
+			if (j.id === id) {
+				j.sum = 1;
+				newPopularProducts.push(j);
+			}
+		})
+				setProducts (newPopularProducts);
+	}
+
+	
+
+	function removeProductSum(id) {
+    	let newPopularProducts = []
+
+    	clearSumProduct(id)
+
+		products.map(j=>{
+			if (j.id !== id) {
+				newPopularProducts.push(j);
+			}
+		})
+		setProducts (newPopularProducts);
+	}
+
+	function reduceProductSum(id) {
+    	let newPopularProducts = []
+
+		products.map(j=>{
+			if (j.id === id) {
+				j.sum -= 1;
+				if (j.sum === 0) {
+					console.log(1)
+					removeProductSum(id)
+				} else {
+					newPopularProducts.push(j);
+				}
+			} else {
+				newPopularProducts.push(j);
+			}
+		})
+				setProducts (newPopularProducts);
+	}
 
     function addProduct(id) {
-    	popularProducts.map((i)=>{
-    		if (i.id===id) {
-    			setProducts(
-    				products.concat(i))
-    		}
-    	})
-    }
-    	console.log(products)
 
-    
+		if (products.find(i=>i.id===id) && popularProducts.find(i=>i.id===id)) {
+		    addProductSum(id)
+		} else if (popularProducts.find(i=>i.id===id)) {
+			popularProducts.map((i)=>{
+	    		if (i.id === id) {
+	    			setProducts (products.concat(i))
+		    	}
+		    })
+		} else {
+			console.log("Error")
+		}
+
+    }
+
 
     return (
+
         <BrowserRouter>
-	        <Context.Provider value={{popularProducts, arrNews, arrParthers, addProduct}}>
+	        <Context.Provider value={{popularProducts, arrNews, arrParthers, addProduct, addProductSum, reduceProductSum, removeProductSum, products}}>
 		        <Navbar/>
-		        <Shop_cart counter={products.length}/>
+		        <Shop_cart/>
 		       	<div className="body">
 		    		<Switch>
 						<Route path={'/'} exact component={Home}/>
