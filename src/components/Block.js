@@ -2,11 +2,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-function Block({params}) {
+function Block({params, num}) {
 	// console.log (params.params.productPhoto)
 	// const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
-    const classes = ["new_block", params.block_type];
-	const bg_color = params.bg_color;
+    const typeDeterminant = (num%4);
+    let type = "short";
+
+    if ((typeDeterminant === 1) || (typeDeterminant === 2)) {
+        type = "long";
+    }
+
+    const classes = ["new_block", type];
+	const bg_color = params.bg_color || "rgba(12, 18, 124, .8)";
     const bg_img = {background: params.bg_img+" center", backgroundSize: "cover"}
 
 

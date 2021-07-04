@@ -1,12 +1,10 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Partner from './Partner';
 
-import Context from '../context';
+import {arrParthers} from '../Date/Date'
 
 
 function Partners() {
-
-const {arrParthers} = useContext(Context)
 
    
     return (
