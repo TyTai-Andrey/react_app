@@ -1,9 +1,16 @@
 import React from 'react';
 import Alert from '../../components/Alert'
 
+import ShopCart from '../../components/ShopCart';
+
+            
+
 function About() {
     return (
-        <Alert namePage={'About'}/>
+        <>
+            <ShopCart/>
+            <Alert namePage={'About'}/>
+        </>
     )
 }
 

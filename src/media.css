@@ -173,6 +173,27 @@
 
 @media (max-width: 1055px) {
 
+    .mobile-menu {
+        display: flex;
+    }
+
+    .footer-nav {
+        height: 170px;
+    }
+
+    .footer .footer-nav_ul {
+        flex-direction: column;
+        height: 100px
+    }
+
+    .line {
+        display: none;
+    }
+
+    .navbar-footer, .navbar-header .btn, .navbar-header .phone, .navbar-header .search {
+        display: none;
+    }
+
     /*.new_block:nth-child(odd) {
         margin-right: 29px;
         

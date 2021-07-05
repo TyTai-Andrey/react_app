@@ -1,6 +1,7 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import CartListItem from '../components/CartListItem';
-import Context from '../context';
+import {useSelector} from 'react-redux';
+
 
 
 
@@ -9,7 +10,7 @@ import Context from '../context';
 
 function CartList() {
 
-    const {products} = useContext(Context)
+    const products = useSelector(state => state.cart)
 
     return (
         <section className="cartList">

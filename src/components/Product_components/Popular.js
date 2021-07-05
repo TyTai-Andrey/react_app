@@ -1,13 +1,15 @@
-import React, {useContext, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import Product from './Product';
-import Context from '../../context';
+
 import { NavLink } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 
 //Блок со всеми товарами
 
 //Принимает 2 массива с объектами, который передаётся в <Product/>
 //Объекты массива содержат:
+
 
 
 // Products_Option:
@@ -26,25 +28,27 @@ import { NavLink } from 'react-router-dom';
 
 
 function Popular() {
-    const {Products_Option, Products_extraOption} = useContext(Context)
 
-    // console.log(popularProducts)
-    // console.log(popularProducts_extraOption)
+
+    const products = useSelector(state => state.products)
+
+
+
 
     return (
        
             <Fragment>
             {   
-                (Products_extraOption.length === 0 || Products_Option === 0) ? null :
+                (products.Products_extraOption.length === 0 || products.Products_Option === 0) ? null :
 
                 <section className="popular">
                     <div className="swapper">
                         <h1>Популярные товары</h1>
                         <div className="popular_products">
                         {
-                            Products_extraOption.map((i,index)=>{
-                                let j = Products_Option.find(a=>a.id===i.id)
-                                return(<Product key={j.id} extraParams={Products_extraOption[index]} params={j}/>)
+                            products.Products_extraOption.map((i,index)=>{
+                                let j = products.Products_Option.find(a=>a.id===i.id)
+                                return(j ? <Product key={j?.id} extraParams={products.Products_extraOption[index]} params={j}/> : null)
                             })
                         }
                         </div>

@@ -1,6 +1,9 @@
-import React, {useContext} from 'react';
-import Context from '../../context';
+import React from 'react';
+
 import { NavLink } from 'react-router-dom';
+import {useDispatch,useSelector} from 'react-redux';
+
+import {cart_addProduct} from '../../help_function/cart_function';
 
 
 //Блок с одним товаром
@@ -26,8 +29,14 @@ import { NavLink } from 'react-router-dom';
 function Product({params, extraParams}) {
     // console.log (params.params.productPhoto)
     const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
-    const {addProduct} = useContext(Context)
 
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
+
+
+    
+
+    
   
 
 
@@ -60,7 +69,7 @@ function Product({params, extraParams}) {
                             <i className="fas fa-ruble-sign"></i>
                         </div>
                     </div>
-                    <div className="iconBuy" onClick={event=>{addProduct(event.target.closest(".product").id)}}>
+                    <div className="iconBuy" onClick={event=>{dispatch(cart_addProduct(event.target.closest(".product").id, state))}}>
                         <div className="btn btn-blue icon">
                             <div className="btn-content">
                                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>

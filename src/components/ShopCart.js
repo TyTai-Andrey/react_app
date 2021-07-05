@@ -1,13 +1,15 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment} from 'react';
 import { NavLink } from 'react-router-dom';
-import Context from '../context';
+import {useSelector} from 'react-redux';
+
 
 
 
 
 function Shop_cart() {
 
-    const {products} = useContext(Context)
+    const products = useSelector(state => state.cart)
+
 
  //    const [ ulr, setUrl ] = useState(document.location.pathname == "/pay")
 
@@ -17,11 +19,11 @@ function Shop_cart() {
 	// 	console.log(1)
 	// })
 
-
+ 
 
     return (
     	<Fragment>
-        	{(products.length === 0) ? null : <div className="shop_cart">
+        	{(products.length === 0 || document.location.pathname === '/pay' ) ? null : <div className="shop_cart">
 	      		<NavLink to="pay">
 		            <div className="btn-content">
 		            	<i className="fa fa-shopping-cart" aria-hidden="true"></i>

@@ -1,16 +1,18 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Popular from '../../components/Product_components/Popular';
 import News from '../../components/News';
 import Partners from '../../components/Partners';
+import ShopCart from '../../components/ShopCart';
 
 
 function Home() {
     return (
-        <Fragment>
+        <>
+            <ShopCart/>
             <Popular/>
             <News/>
             <Partners/>
-        </Fragment>
+        </>
     )
 }
 

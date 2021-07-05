@@ -1,9 +1,15 @@
 import React from 'react';
 import Alert from '../../components/Alert'
+import ShopCart from '../../components/ShopCart';
+
+            
 
 function Saveguard() {
     return (
-        <Alert namePage={'Saveguard'}/>
+        <>
+            <ShopCart/>
+            <Alert namePage={'Saveguard'}/>
+        </>
     )
 }
 

@@ -13,3 +13,17 @@ export const arrParthers = [
     {id: "par9", URL: '/img/logo_4.jpg', alt: 'logo_4'}, 
     {id: "par10", URL: '/img/logo_5.jpg', alt: 'logo_5'}
 ]
+
+export const Products_extraOption = [
+        {id: "p1", iconAction: true,  iconHit: true,  iconBestPrice: true,   oldPrice: '1 499 '},
+        {id: "p2", iconAction: true,  iconHit: false, iconBestPrice: false,  oldPrice: null},
+        {id: "p3", iconAction: false, iconHit: true,  iconBestPrice: false,  oldPrice: '2 699 '},
+        {id: "p4", iconAction: true,  iconHit: true,  iconBestPrice: false,  oldPrice: '2 199 '},
+    ]
+
+export const Products_Option = [
+        {id: "p1", productPhoto: "https://www.ejin.ru/wp-content/uploads/2017/09/14-890.jpg", title:'Цветок, который стоит на столе, такой загадочный.', description: 'А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя', price: '799 '},
+        {id: "p2", productPhoto: "https://doseng.org/uploads/posts/2018-06/1528416202_11.jpg", title:'Набор юного инстаблогера', description: 'Посмотрите на него. Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...', price: '13 666 '},
+        {id: "p3", productPhoto: "https://get.wallhere.com/photo/2560x1600-px-landscape-river-rock-waterfall-1105857.jpg", title:'Лампа. Просто лампа.', description: 'В паре с загадочным цветком добавит загадочности вашему интерьеру', price: '1 789 '},
+        {id: "p4", productPhoto: "https://i.pinimg.com/736x/59/17/5b/59175b1f980587cd8aa4c800835c9dec.jpg", title:'Классные деревянные минималистичные часы с...', description: 'Все в ту же копилку загдочности вашего интерьера и вашей натуры', price: '1 899 '},
+    ]

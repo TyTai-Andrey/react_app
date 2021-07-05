@@ -29,6 +29,7 @@ export default function Navbar() {
 		        	<div className="phone-text ltl-grey">Звоните с 8 до 23!</div>
 		        	</div>
 		        	<div className="btn btn-blue short"><div className="btn-content"><span>Войти</span></div></div>
+		        	<div className="mobile-menu"><span></span></div>
 				</div>
 		        <nav className='navbar-footer'>
 		        	<ul>

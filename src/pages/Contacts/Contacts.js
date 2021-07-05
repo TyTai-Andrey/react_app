@@ -1,9 +1,14 @@
 import React from 'react';
 import Alert from '../../components/Alert'
+import ShopCart from '../../components/ShopCart';
+
 
 function Contacts() {
     return (
-        <Alert namePage={'Contacts'}/>
+        <>
+            <ShopCart/>
+            <Alert namePage={'Contacts'}/>
+        </>
     )
 }
 

@@ -1,68 +1,57 @@
-import React, {Fragment, useContext} from 'react';
+import React from 'react';
 import Context from '../context';
 
-   
+import {cart_addProduct, cart_removeProductSum, cart_reduceProductSum} from '../help_function/cart_function'
+import {useDispatch, useSelector} from 'react-redux';
 
-// {params.title}
-// {params.newPrice}
 
 
 
 
 function CartListItem({params}) {
-    // const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
-
-     const {addProductSum, reduceProductSum, removeProductSum} = useContext(Context)
-
-
-     // let a = ''+params[0].sum*(+params[0].price.split(" ").join(''))
-     // let b = ''
-        
-        
-     // a = a.split('')
-     // if (a.length > 3) {
-     //    b = a.splice(-3, 3)
-     // }
-     // a = a.join('')+' '+b.join('')
-     // console.log(a)
 
      
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
+  
+
     return (
-       <Fragment>
+       <>
         {
-            params.map(i=>
-                <li key={i.id} id={i.id} className="cartList_item">
+            params.map(i=> {
+                const date = state.products.Products_Option.find(j=>j.id===i.id)
+                return <li key={date.id} id={date.id} className="cartList_item">
                     
                     <div className="cartList_item-body">
                         <div className="cartList_item-photo">
-                            <img src={i.productPhoto} width='100%' height='100%' alt={i.title} />
+                            <img src={date.productPhoto} width='100%' height='100%' alt={date.title} />
                         </div>
                         <div className="cartList_item-text">
                             <div className="cartList_item-buttons_price">
-                                <h2 className="title">{i.title}</h2>
+                                <h2 className="title">{date.title}</h2>
                                 <div className="cartList_item-buttons_changes_price">
-                                    <button onClick={event=>reduceProductSum(event.target.closest("li").id)}>
+                                    <button onClick={event=>dispatch(cart_reduceProductSum(event.target.closest("li").id, state))}>
                                         —
                                     </button>
                                     <p>{i.sum}</p>
-                                    <button onClick={event=>addProductSum(event.target.closest("li").id)}>
+                                    <button onClick={event=>dispatch(cart_addProduct(event.target.closest("li").id, state))}>
                                         +
                                     </button>
                                 </div>
                             </div>
                             <div className="cartList_item-button_delete">
-                                <p>{i.sum*(+i.price.split(" ").join(''))}</p>
-                                <button onClick={event=>removeProductSum(event.target.closest("li").id)}><i className="fa fa-trash" aria-hidden="true"></i></button>
+                                <p>{i.sum*(+date.price.split(" ").join(''))}</p>
+                                <button onClick={event=>dispatch(cart_removeProductSum(event.target.closest("li").id, state))}><i className="fa fa-trash" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         
                     </div>
 
                 </li>
-                )
+            })
         }
 
-       </Fragment>      	
+       </>      	
     )
 }
 

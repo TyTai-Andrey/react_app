@@ -82,6 +82,32 @@ h3 {
     outline-color: #768298;
 }
 
+.mobile-menu {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    /*background: #000;*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+}
+
+.mobile-menu:after, .mobile-menu:before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+}
+
 .phone {
     margin-right: 30px;
     width: 143px;
@@ -201,7 +227,8 @@ h3 {
     font-size: 18px;
     display: inline-flex;
     justify-content: space-between;
-    width: 786px;
+    max-width: 786px;
+    width: 100%;
 }
 
 .navbar-footer ul li a {
