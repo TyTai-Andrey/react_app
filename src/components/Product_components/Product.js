@@ -27,7 +27,7 @@ import {cart_addProduct} from '../../help_function/cart_function';
 
 
 function Product({params, extraParams}) {
-    // console.log (params.params.productPhoto)
+
     const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
 
     const dispatch = useDispatch()

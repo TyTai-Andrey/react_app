@@ -11,16 +11,6 @@ function Shop_cart() {
     const products = useSelector(state => state.cart)
 
 
- //    const [ ulr, setUrl ] = useState(document.location.pathname == "/pay")
-
-
- //    useEffect(()=>{
-	// 	setUrl (document.location.pathname == "/pay");
-	// 	console.log(1)
-	// })
-
- 
-
     return (
     	<Fragment>
         	{(products.length === 0 || document.location.pathname === '/pay' ) ? null : <div className="shop_cart">

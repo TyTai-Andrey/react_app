@@ -4,10 +4,6 @@ import {useSelector} from 'react-redux';
 
 
 
-
-
-
-
 function CartList() {
 
     const products = useSelector(state => state.cart)

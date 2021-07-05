@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 
 function Block({params, num}) {
-	// console.log (params.params.productPhoto)
-	// const photo = {background: `url('${params.productPhoto}') center`, backgroundSize: "cover"}
+
     const typeDeterminant = (num%4);
     let type = "short";
 

@@ -8,7 +8,6 @@ function Footer() {
         {modal: false,}
     )
 
-
     function openModal() {
 
         setModal(
@@ -24,7 +23,7 @@ function Footer() {
                 {modal: !modal.modal}
             )
         }
-        document.body.style='overflow: auto'        
+        document.body.style=''        
     }
 
     return (

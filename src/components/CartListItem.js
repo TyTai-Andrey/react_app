@@ -1,5 +1,4 @@
 import React from 'react';
-import Context from '../context';
 
 import {cart_addProduct, cart_removeProductSum, cart_reduceProductSum} from '../help_function/cart_function'
 import {useDispatch, useSelector} from 'react-redux';
